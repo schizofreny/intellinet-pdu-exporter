@@ -1,0 +1,16 @@
+name: Docker Image CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      COMMIT_SHA: ${{ github.sha }}
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag panzelva/intellinet_pdu_exporter:$COMMIT_SHA
+    - name: Push the Docker image
+      run: docker push panzelva/intellinet_pdu_exporter:$COMMIT_SHA
+    
