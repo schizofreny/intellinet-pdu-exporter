@@ -3,7 +3,7 @@ import envalid, { port, str } from "envalid"
 const config = envalid.cleanEnv(
   process.env,
   {
-    PORT: port({ default: 9987 }),
+    PORT: port({ default: 3000 }),
     PDU_IP: str({ default: "192.168.88.249" }),
     PDU_STATS_PATH: str({ default: "/status.xml" })
   },
