@@ -17,6 +17,6 @@ jobs:
       - name: Login to registry
         run: docker login --username panzelva --password $DOCKER_HUB_ACCESS_TOKEN
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag panzelva/efukt-watcher:${{ steps.version.outputs.VERSION }}
+        run: docker build . --file Dockerfile --tag panzelva/intellinet_pdu_exporter:${{ steps.version.outputs.VERSION }}
       - name: Push the Docker image
-        run: docker push panzelva/efukt-watcher:${{ steps.version.outputs.VERSION }}
+        run: docker push panzelva/intellinet_pdu_exporter:${{ steps.version.outputs.VERSION }}
