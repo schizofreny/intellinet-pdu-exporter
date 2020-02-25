@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DOCKER_HUB_ACCESS_TOKEN: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-      IMAGE_NAME: panzelva/intellinet_pdu_exporter
+      IMAGE_NAME: schizofreny/intellinet-pdu-exporter
     steps:
       - uses: actions/checkout@v1
       - name: Get version from tag
