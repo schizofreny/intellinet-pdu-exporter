@@ -6,7 +6,7 @@ import env from "./env"
 import { parsePDUValueToNum } from "./utils"
 
 const app = express()
-const port = 3000
+const port = env.PORT
 
 app.get("/", (req, res) => {
   res.send('Intellinet PDU exporter <br/><br/> <a href="/metrics">metrics</a>')
