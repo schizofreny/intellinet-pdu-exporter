@@ -33,7 +33,7 @@
   "dependencies": {
     "envalid": "^6.0.1",
     "express": "^4.17.1",
-    "got": "^10.6.0",
+    "got": "^11.8.5",
     "prom-client": "^12.0.0",
     "xml2js": "^0.4.23"
   }
